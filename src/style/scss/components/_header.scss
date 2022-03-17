@@ -1,0 +1,72 @@
+@import '../base/variables';
+
+header{
+    width: 100%;
+    background-color: $white-b;
+    @include d-flex;
+    >div, >nav{
+        width: 100%;
+        max-width: $ancho-max;
+        @include d-flex(row,center,flex-start);
+    }
+    >div{
+        >img{
+            max-width: 50px;
+            margin: 0 5px;
+        }
+        >button{
+            border: none;
+            background: none;
+            color: $black;
+            &:hover{
+                color: $main;
+            }
+        }
+    }
+    >nav{
+        margin-top: 15px;
+        padding-top: 10px;
+        button{
+            background-color: $white;
+            border: solid 1px $white-b;
+            border-bottom: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 10px 10px 0 0;
+            opacity: 50%;
+            &.selected, &:hover{
+                opacity: 100%;
+                -webkit-box-shadow: 5px -2px 10px -6px rgba(0,0,0,0.85); 
+                box-shadow: 5px -2px 10px -6px rgba(0,0,0,0.85);
+            }
+        }
+    }
+}
+
+.cntr-title{
+    @include d-flex(column,flex-start,space-around);
+    width: 100%;
+    h1{
+        color: $black;
+        font-size: 30px;
+        text-transform: lowercase;
+        position: relative;
+        .app{
+            color: $main;
+        }
+        .hide{
+            font-size: 0px;
+            transition: all 0.2s ease-in-out;
+            right:100%;
+        }
+    }
+    h2{
+        color: $black;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    &:hover .hide{
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,19 @@
+//Variables
+
+//Colores
+$black: #272838;
+$main: #6bbaec;
+$white-b: #f7f7f7;
+$white: white;
+$red: red;
+
+//disposicion de elementos
+@mixin d-flex($direction:column, $align:center, $justify:center){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+//Ancho máximo app
+$ancho-max: 1000px;

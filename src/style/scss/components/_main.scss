@@ -1,0 +1,321 @@
+@import '../base/variables';
+
+main{
+    width: 100%;
+    max-width: $ancho-max;
+    @include d-flex;
+    padding: 15px;
+    background-color: $white;
+    -webkit-box-shadow: 5px 5px 10px -6px rgba(0,0,0,0.85); 
+    box-shadow: 5px 5px 10px -6px rgba(0,0,0,0.85);
+    border-radius: 0 5px 5px 5px;
+    .srch-monitorias{
+        width: 100%;
+        @include d-flex(column,flex-start,center);
+        margin: 10px 0;
+        border-top: solid 3px $white-b;
+        border-bottom: solid 3px $white-b;
+        label{
+            font-size: 18px;
+            font-weight: 600;
+            color: $main;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        >div{
+            padding:5px;
+            @include d-flex(row,center,center);
+            width: 100%;
+            >select{
+                color: $black;
+                background-color: $white-b;
+                padding: 5px;
+                border: solid 3px $white-b;
+                border-radius: 5px 0 0 5px;
+                font-size: 14px;
+                >option{
+                    border: none;
+                }
+            }
+            >input{
+                flex-grow: 1;
+                padding: 5px 10px;
+                border: solid 3px $white-b;
+                border-radius: 0 5px 5px 0;
+                color: $black;
+                font-size: 14px;
+            }
+        }
+    }
+    .srch-monitores{
+        width: 100%;
+        @include d-flex(row,center, flex-start);
+        flex-wrap: wrap;
+        margin: 10px 0;
+        border-top: solid 3px $white-b;
+        border-bottom: solid 3px $white-b;
+        padding: 5px;
+        >label{
+            font-size: 18px;
+            font-weight: 600;
+            color: $main;
+            padding: 5px 0;
+            margin: 10px 0;
+            width: 100%;
+        }
+        >div{
+            width:47%;
+            @include d-flex(row, center, flex-start);
+            margin-bottom: 8px;
+            >label, input{
+                font-size: 14px;
+                padding: 5px;
+                margin-right: 5px;
+                font-weight: 650px;
+                color: $black;
+            }
+            >input{
+                flex-grow: 1;
+                border: solid 3px $white-b;
+                border-radius: 0 5px 5px 0;
+                color: $black;
+            }
+            >select{
+                color: $black;
+                background-color: $white-b;
+                padding: 5px;
+                border: solid 3px $white-b;
+                font-size: 14px;
+                border-radius: 5px;
+                >option{
+                    border: none;
+                }
+            }
+        }
+        @media screen and (max-width:850px){
+            @include d-flex(column, flex-start, center);
+            >div{
+                width:100%;
+            }
+        }
+    }
+}
+
+.cntr-add{
+    width: 100%;
+    @include d-flex(column, flex-start, center);
+    padding: 15px;
+    margin: 10px 15px;
+    border-radius: 5px;
+    border: solid 3px $white-b;
+    >div{
+        width: 100%;
+        margin-bottom: 10px;
+        @include d-flex(row,center,flex-start);
+        h5{
+            font-size: 18px;
+            font-weight: 600;
+            color: $main;
+            padding: 5px;
+            span{
+                font-size: 14px;
+                color: $black;
+                margin: 0 5px
+            }
+        }
+        button{
+            @include d-flex;
+            margin: 0 10px;
+            border: none;
+            background-color: $white-b;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+            transform: rotate(45deg);
+            img{
+                width: 23px;
+                height: 23px;
+            }
+            &.close{
+                transform: rotate(0)
+            }
+        }
+    }
+    form{
+        >div{
+            @include d-flex(row, center, flex-start);
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+            label, input{
+                margin-right: 10px;
+                padding: 5px;
+            }
+            input{
+                flex-grow: 1;
+                border: solid 3px $white-b;
+                border-radius: 0 5px 5px 0;
+                color: $black;
+            }
+            >select{
+                color: $black;
+                background-color: $white-b;
+                padding: 5px;
+                border: solid 3px $white-b;
+                font-size: 14px;
+                border-radius: 5px;
+                >option{
+                    border: none;
+                }
+            }
+            button{
+                margin: 10px 10px 0 0;
+                padding: 8px 12px;
+                font-size: 15px;
+                font-weight: 550;
+                border-radius: 5px;
+                border: none;
+                &:first-child{
+                    background-color: $main;
+                    color: $white-b;
+                    &:hover{
+                        background-color: $black;
+                    }
+                }
+                ~button:hover{
+                    background-color: $red;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.cntr-lista{
+    width: 100%;
+    @include d-flex(column, flex-start, center);
+    h4{
+        font-size: 18px;
+        font-weight: 600;
+        color: $main;
+        padding: 5px;
+    }
+    >div{
+        width: 100%;
+        border: solid 3px $white-b;
+        border-radius: 8px;
+        margin: 5px;
+        padding: 15px;
+        >div:first-child{
+            @include d-flex(row, center, flex-start);
+            margin: 10px 0;
+            >h5{
+                font-size: 17px;
+                color: $black;
+            }
+            >button{
+                margin-left: 10px;
+                border: none;
+                background: none;
+                color: $main;
+                font-weight: 600;
+            }
+        }
+        p{
+            margin-bottom: 5px;
+            span{
+                font-weight: 700;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.cntr-edit{
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: solid 3px $white-b;
+    @include d-flex(column,flex-start,center);
+    >div{
+        width: 100%;
+        @include d-flex(row,center,flex-start);
+        h6{
+            font-size: 15px;
+        }
+        button{
+            @include d-flex;
+            margin: 0 10px;
+            padding: 2px;
+            border: none;
+            background-color: $white-b;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+            transform: rotate(180deg);
+            img{
+                width: 20px;
+            }
+            &.close{
+                transform: rotate(0);
+            }
+        }
+    }
+    form{
+        margin: 15px 0;
+        >div{
+            @include d-flex(row, center, flex-start);
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+            label, input{
+                margin-right: 10px;
+                padding: 5px;
+            }
+            input{
+                flex-grow: 1;
+                border: solid 3px $white-b;
+                border-radius: 0 5px 5px 0;
+                color: $black;
+            }
+            >select{
+                color: $black;
+                background-color: $white-b;
+                padding: 5px;
+                border: solid 3px $white-b;
+                font-size: 14px;
+                border-radius: 5px;
+                >option{
+                    border: none;
+                }
+            }
+            button{
+                margin: 10px 10px 0 0;
+                padding: 8px 12px;
+                font-size: 15px;
+                font-weight: 550;
+                border-radius: 5px;
+                border: none;
+                &:first-child{
+                    background-color: $main;
+                    color: $white-b;
+                    &:hover{
+                        background-color: $black;
+                    }
+                }
+                ~button:hover{
+                    background-color: $red;
+                    color: white;
+                }
+            }
+        }
+    }
+    >button{
+        margin: 10px 10px 0 0;
+        padding: 8px 12px;
+        font-size: 15px;
+        font-weight: 550;
+        border-radius: 5px;
+        border: none;
+        &:hover{
+            background-color: $red;
+            color: white;
+        }
+    }
+}

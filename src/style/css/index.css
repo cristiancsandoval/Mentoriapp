@@ -1,0 +1,620 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #f7f7f7;
+}
+
+button, input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.d-none {
+  display: none;
+}
+
+.cntr-general {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cntr-inicio {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #272838;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cntr-inicio > div {
+  background-color: #272838;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #f7f7f7;
+}
+.cntr-inicio > div > img {
+  width: 50%;
+  max-width: 100px;
+  margin: 10px 0;
+}
+.cntr-inicio > div h1 {
+  font-size: 40px;
+  color: #f7f7f7;
+  text-transform: lowercase;
+}
+.cntr-inicio > div h1 .anim {
+  animation: aparecer 1.7s ease-in-out;
+}
+.cntr-inicio > div h1 .app {
+  color: #6bbaec;
+}
+.cntr-inicio > div h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #f7f7f7;
+  text-transform: uppercase;
+}
+.cntr-inicio > div > button {
+  width: 200px;
+  padding: 10px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #6bbaec;
+  color: #272838;
+}
+.cntr-inicio > div > button:hover {
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0px 0px 11px -1px #6bbaec;
+  box-shadow: 0px 0px 11px -1px #6bbaec;
+}
+.cntr-inicio > form {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  transition: all 0.5s ease-in-out;
+}
+.cntr-inicio > form > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  margin: 10px 0;
+}
+.cntr-inicio > form > div label {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+.cntr-inicio > form > div input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  color: #272838;
+}
+.cntr-inicio > form > div input:focus {
+  outline: none;
+  border: 1px solid #6bbaec;
+  -webkit-box-shadow: 0px 0px 11px -1px #6bbaec;
+  box-shadow: 0px 0px 11px -1px #6bbaec;
+}
+.cntr-inicio > form > button {
+  padding: 10px 15px;
+  margin: 15px 0;
+  max-width: 90%;
+  border: none;
+  border-radius: 5px;
+  background-color: #6bbaec;
+  color: #272838;
+}
+.cntr-inicio > form > button:hover {
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0px 0px 11px -1px #6bbaec;
+  box-shadow: 0px 0px 11px -1px #6bbaec;
+}
+.cntr-inicio > form.hidden {
+  bottom: 180px;
+}
+.cntr-inicio > form.hidden > div {
+  visibility: hidden;
+}
+.cntr-inicio h6 {
+  font-size: 15px;
+  color: #6bbaec;
+  font-weight: 500;
+}
+.cntr-inicio h6.alert {
+  color: red;
+}
+
+@keyframes aparecer {
+  0% {
+    font-size: 0;
+  }
+  75% {
+    font-size: 0;
+  }
+}
+header {
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header > div, header > nav {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+header > div > img {
+  max-width: 50px;
+  margin: 0 5px;
+}
+header > div > button {
+  border: none;
+  background: none;
+  color: #272838;
+}
+header > div > button:hover {
+  color: #6bbaec;
+}
+header > nav {
+  margin-top: 15px;
+  padding-top: 10px;
+}
+header > nav button {
+  background-color: white;
+  border: solid 1px #f7f7f7;
+  border-bottom: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 10px 10px 0 0;
+  opacity: 50%;
+}
+header > nav button.selected, header > nav button:hover {
+  opacity: 100%;
+  -webkit-box-shadow: 5px -2px 10px -6px rgba(0, 0, 0, 0.85);
+  box-shadow: 5px -2px 10px -6px rgba(0, 0, 0, 0.85);
+}
+
+.cntr-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+}
+.cntr-title h1 {
+  color: #272838;
+  font-size: 30px;
+  text-transform: lowercase;
+  position: relative;
+}
+.cntr-title h1 .app {
+  color: #6bbaec;
+}
+.cntr-title h1 .hide {
+  font-size: 0px;
+  transition: all 0.2s ease-in-out;
+  right: 100%;
+}
+.cntr-title h2 {
+  color: #272838;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.cntr-title:hover .hide {
+  font-size: 30px;
+}
+
+main {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 10px -6px rgba(0, 0, 0, 0.85);
+  box-shadow: 5px 5px 10px -6px rgba(0, 0, 0, 0.85);
+  border-radius: 0 5px 5px 5px;
+}
+main .srch-monitorias {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0;
+  border-top: solid 3px #f7f7f7;
+  border-bottom: solid 3px #f7f7f7;
+}
+main .srch-monitorias label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6bbaec;
+  padding: 5px;
+  margin: 10px 0;
+}
+main .srch-monitorias > div {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+main .srch-monitorias > div > select {
+  color: #272838;
+  background-color: #f7f7f7;
+  padding: 5px;
+  border: solid 3px #f7f7f7;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+}
+main .srch-monitorias > div > select > option {
+  border: none;
+}
+main .srch-monitorias > div > input {
+  flex-grow: 1;
+  padding: 5px 10px;
+  border: solid 3px #f7f7f7;
+  border-radius: 0 5px 5px 0;
+  color: #272838;
+  font-size: 14px;
+}
+main .srch-monitores {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  border-top: solid 3px #f7f7f7;
+  border-bottom: solid 3px #f7f7f7;
+  padding: 5px;
+}
+main .srch-monitores > label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6bbaec;
+  padding: 5px 0;
+  margin: 10px 0;
+  width: 100%;
+}
+main .srch-monitores > div {
+  width: 47%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+main .srch-monitores > div > label, main .srch-monitores > div input {
+  font-size: 14px;
+  padding: 5px;
+  margin-right: 5px;
+  font-weight: 650px;
+  color: #272838;
+}
+main .srch-monitores > div > input {
+  flex-grow: 1;
+  border: solid 3px #f7f7f7;
+  border-radius: 0 5px 5px 0;
+  color: #272838;
+}
+main .srch-monitores > div > select {
+  color: #272838;
+  background-color: #f7f7f7;
+  padding: 5px;
+  border: solid 3px #f7f7f7;
+  font-size: 14px;
+  border-radius: 5px;
+}
+main .srch-monitores > div > select > option {
+  border: none;
+}
+@media screen and (max-width: 850px) {
+  main .srch-monitores {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  main .srch-monitores > div {
+    width: 100%;
+  }
+}
+
+.cntr-add {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 15px;
+  margin: 10px 15px;
+  border-radius: 5px;
+  border: solid 3px #f7f7f7;
+}
+.cntr-add > div {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cntr-add > div h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6bbaec;
+  padding: 5px;
+}
+.cntr-add > div h5 span {
+  font-size: 14px;
+  color: #272838;
+  margin: 0 5px;
+}
+.cntr-add > div button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  border: none;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(45deg);
+}
+.cntr-add > div button img {
+  width: 23px;
+  height: 23px;
+}
+.cntr-add > div button.close {
+  transform: rotate(0);
+}
+.cntr-add form > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+.cntr-add form > div label, .cntr-add form > div input {
+  margin-right: 10px;
+  padding: 5px;
+}
+.cntr-add form > div input {
+  flex-grow: 1;
+  border: solid 3px #f7f7f7;
+  border-radius: 0 5px 5px 0;
+  color: #272838;
+}
+.cntr-add form > div > select {
+  color: #272838;
+  background-color: #f7f7f7;
+  padding: 5px;
+  border: solid 3px #f7f7f7;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.cntr-add form > div > select > option {
+  border: none;
+}
+.cntr-add form > div button {
+  margin: 10px 10px 0 0;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 550;
+  border-radius: 5px;
+  border: none;
+}
+.cntr-add form > div button:first-child {
+  background-color: #6bbaec;
+  color: #f7f7f7;
+}
+.cntr-add form > div button:first-child:hover {
+  background-color: #272838;
+}
+.cntr-add form > div button ~ button:hover {
+  background-color: red;
+  color: white;
+}
+
+.cntr-lista {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.cntr-lista h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6bbaec;
+  padding: 5px;
+}
+.cntr-lista > div {
+  width: 100%;
+  border: solid 3px #f7f7f7;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 15px;
+}
+.cntr-lista > div > div:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+.cntr-lista > div > div:first-child > h5 {
+  font-size: 17px;
+  color: #272838;
+}
+.cntr-lista > div > div:first-child > button {
+  margin-left: 10px;
+  border: none;
+  background: none;
+  color: #6bbaec;
+  font-weight: 600;
+}
+.cntr-lista > div p {
+  margin-bottom: 5px;
+}
+.cntr-lista > div p span {
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.cntr-edit {
+  width: 100%;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: solid 3px #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.cntr-edit > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cntr-edit > div h6 {
+  font-size: 15px;
+}
+.cntr-edit > div button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  padding: 2px;
+  border: none;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(180deg);
+}
+.cntr-edit > div button img {
+  width: 20px;
+}
+.cntr-edit > div button.close {
+  transform: rotate(0);
+}
+.cntr-edit form {
+  margin: 15px 0;
+}
+.cntr-edit form > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+.cntr-edit form > div label, .cntr-edit form > div input {
+  margin-right: 10px;
+  padding: 5px;
+}
+.cntr-edit form > div input {
+  flex-grow: 1;
+  border: solid 3px #f7f7f7;
+  border-radius: 0 5px 5px 0;
+  color: #272838;
+}
+.cntr-edit form > div > select {
+  color: #272838;
+  background-color: #f7f7f7;
+  padding: 5px;
+  border: solid 3px #f7f7f7;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.cntr-edit form > div > select > option {
+  border: none;
+}
+.cntr-edit form > div button {
+  margin: 10px 10px 0 0;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 550;
+  border-radius: 5px;
+  border: none;
+}
+.cntr-edit form > div button:first-child {
+  background-color: #6bbaec;
+  color: #f7f7f7;
+}
+.cntr-edit form > div button:first-child:hover {
+  background-color: #272838;
+}
+.cntr-edit form > div button ~ button:hover {
+  background-color: red;
+  color: white;
+}
+.cntr-edit > button {
+  margin: 10px 10px 0 0;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 550;
+  border-radius: 5px;
+  border: none;
+}
+.cntr-edit > button:hover {
+  background-color: red;
+  color: white;
+}
+
+/**CONFIGURACIÓN GENERAL DE ESTILOS**/
+
+/*# sourceMappingURL=index.css.map */

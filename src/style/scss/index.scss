@@ -1,0 +1,7 @@
+/**CONFIGURACIÓN GENERAL DE ESTILOS**/
+@use './base/general';
+@use './components/inicio';
+@use './components/header';
+@use './components/main'
+
+//sass --watch src/style/scss/index.scss src/style/css/index.css

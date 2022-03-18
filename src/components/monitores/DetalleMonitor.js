@@ -7,7 +7,7 @@ const DetalleMonitor = ({monitor, monitorias}) => {
     
     const nombreMonitorias = () => {
         let lista = []
-        if(listaMonitorias===[]){
+        if(listaMonitorias.length===0){
             lista = ["No se han asignado monitorías"]
         }
         else{
